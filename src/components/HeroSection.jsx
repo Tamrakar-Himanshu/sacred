@@ -5,7 +5,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import logo from "../assets/IMG_9437.png";
+import logo from "../assets/IMG_9437.PNG";
 import divider from "../assets/divider-main-1.png";
 
 const HeroSection = () => {
