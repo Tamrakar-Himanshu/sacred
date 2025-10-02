@@ -49,7 +49,7 @@ const HowItWorks = () => {
         </h2>
 
         {/* Sections */}
-        <div className="space-y-32 px-8 sm:px-20   ">
+        <div className="space-y-12 sm:space-y-32 px-8 sm:px-20   ">
           {sections.map((section, index) => (
             <div key={section.id}>
               <div

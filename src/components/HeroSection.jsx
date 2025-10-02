@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import { ArrowRight, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  CircleArrowRight,
+  Menu,
+  X,
+} from "lucide-react";
 import logo from "../assets/IMG_9437.PNG";
 import mobdivider from "../assets/divider-main-1-phone.png";
 import divider from "../assets/divider-main-1.png";
@@ -99,9 +106,9 @@ const HeroSection = () => {
       <div
         className={`${headerBgColor} sticky top-0 z-50 transition-colors duration-500`}
       >
-        <nav className="flex items-center justify-between px-6 py-3">
+        <nav className="flex items-center justify-between px-6 py-2 sm:py-3">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="logo" className="w-16 h-16" />
+            <img src={logo} alt="logo" className="w-12 h-12 sm:w-16 sm:h-16" />
           </div>
 
           {/* Desktop Menu */}
@@ -138,9 +145,9 @@ const HeroSection = () => {
           <div className="lg:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? (
-                <X className="w-8 h-8 text-white" />
+                <X className={` ${headerTextColor} w-8 h-8 `} />
               ) : (
-                <Menu className="w-8 h-8 text-white" />
+                <Menu className={` ${headerTextColor} w-8 h-8 `} />
               )}
             </button>
           </div>
@@ -169,7 +176,7 @@ const HeroSection = () => {
       <div className="bg-gradient-to-b from-[#712D13] to-[#BF5F0B] ">
         <div
           ref={cardsRef}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-0 sm:gap-12 px-8 lg:px-16 pt-4 sm:pt-10 pb-16 sm:pb-32 items-center max-w-7xl mx-auto container"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-0 sm:gap-12 px-8 lg:px-16 pt-4 sm:pt-10 pb-16 sm:pb-12 items-center max-w-7xl mx-auto container"
         >
           {/* Left Side - Heading */}
           <div className="flex flex-col justify-center ">
@@ -195,13 +202,13 @@ const HeroSection = () => {
                   className={`${card.bgColor} rounded-xl overflow-hidden px-4 flex items-center justify-between shadow-lg`}
                 >
                   {/* Text on left */}
-                  <div className="flex flex-col">
-                    <h2 className="text-white text-lg font-semibold">
-                      {card.title}
-                    </h2>
-                    <div className="flex mt-2 gap-4 ">
-                      <p className="text-white text-xs mt-1">{card.subtitle}</p>
-                      <ArrowRight className="w-5 h-5 text-white" />
+                  <div className="flex items-center justify-around gap-2">
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{card.title}</h3>
+                      <p className="text-md font-semibold text-white">{card.subtitle}</p>
+                    </div>
+                    <div className="">
+                      <CircleArrowRight className="text-white w-5 " />
                     </div>
                   </div>
 
@@ -237,7 +244,7 @@ const HeroSection = () => {
                           </h2>
                           <div className="flex items-center gap-2 text-white mb-8">
                             <span className="text-lg">{card.subtitle}</span>
-                            <ArrowRight className="w-5 h-5" />
+                            <CircleArrowRight className="w-8 h-8" />
                           </div>
                         </div>
                         <div

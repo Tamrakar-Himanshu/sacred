@@ -61,7 +61,7 @@ const Faq = () => {
         <div className="w-full h-full bg-[#F5F3F0]" style={{ borderRadius: '50% 50% 0 0' }} />
       </div>
 
-      <div className="relative container mx-auto px-4 py-12 md:py-20 max-w-4xl">
+      <div className="relative container mx-auto px-6 py-12 md:py-20 max-w-4xl">
         {/* Title */}
         <h2 className="text-3xl md:text-5xl font-light text-center mb-8 md:mb-16 text-slate-900 tracking-tight px-4">
           Frequently asked questions
