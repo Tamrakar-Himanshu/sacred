@@ -33,16 +33,15 @@ export default function App() {
   }, []);
 
   return (
-    // <div data-scroll-container ref={scrollContainerRef}>
-    //   <HeroSection />
-    // </div>
-    <div>
-      <HeroSection />
-      <AboutUs />
-      <PhotoSection />
-      <HowItWorks />
-      <Faq />
-      <Footer />
+    <div data-scroll-container ref={scrollContainerRef}>
+      <div>
+        <HeroSection />
+        <AboutUs />
+        <PhotoSection />
+        <HowItWorks />
+        <Faq />
+        <Footer />
+      </div>{" "}
     </div>
   );
 }
