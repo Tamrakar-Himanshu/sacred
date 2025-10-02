@@ -23,7 +23,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="bg-[#FFFCF6] px-32">
+    <section ref={sectionRef} className="bg-[#FFFCF6] px-6 sm:px-32 pb-3">
       <div className="relative flex justify-center">
         <ChevronDown
           onClick={handleScrollToTop}
@@ -31,14 +31,19 @@ const AboutUs = () => {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-40">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-20 sm:py-40">
         {/* Left: Headline */}
-        <div className="relative">
-          <div className="absolute -left-14 -top-8">
-            <img src={upperimg} alt="img" />
+        <div className="relative flex flex-col items-center lg:items-start text-center lg:text-left">
+          {/* Mobile Image */}
+          <div className="absolute top-[20px] left-[-10px] lg:static -translate-x-0 lg:-translate-x-14 -translate-y-0 lg:-translate-y-8">
+            <img
+              src={upperimg}
+              alt="img"
+              className="w-15 h-18 sm:w-24 sm:h-24"
+            />
           </div>
 
-          <h2 className="text-[48px] md:text-5xl lg:text-6xl font-light text-gray-900 leading-tight my-5">
+          <h2 className="text-[28px] sm:text-[28px] lg:text-6xl font-light text-gray-900 leading-tight mt-20 lg:mt-0">
             The world's largest
             <br />
             therapy service.
@@ -48,12 +53,12 @@ const AboutUs = () => {
         </div>
 
         {/* Right: Skills */}
-        <div>
-          <div className="flex flex-wrap gap-3 lg:gap-4">
+        <div className="flex justify-center lg:justify-start">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
             {skills.map((skill, index) => (
               <span
                 key={index}
-                className="px-5 py-3 lg:px-6 lg:py-3.5 border-2 border-teal-600/30 text-white bg-[#D97F11] rounded-full text-sm lg:text-base font-medium hover:bg-[#BF5F0B] transition-all duration-300 shadow-sm hover:shadow-md"
+                className="bg-gradient-to-r from-[#D97F11]/90 to-[#BF5F0B]/90 text-white px-4 py-2 sm:px-5 sm:py-3 rounded-full text-xs sm:text-sm lg:text-base font-medium whitespace-nowrap hover:opacity-90 transition-all duration-300 mb-2 sm:mb-0"
               >
                 {skill}
               </span>

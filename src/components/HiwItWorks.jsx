@@ -49,7 +49,7 @@ const HowItWorks = () => {
         </h2>
 
         {/* Sections */}
-        <div className="space-y-32 px-20   ">
+        <div className="space-y-32 px-8 sm:px-20   ">
           {sections.map((section, index) => (
             <div key={section.id}>
               <div
@@ -124,16 +124,16 @@ const HowItWorks = () => {
                   )}
                   {index === 1 && (
                     <>
-                      <div className="absolute top-8 right-0 w-32 h-32 bg-[#F4D35E] rounded-full translate-x-12 opacity-60" />
-                      <div className="absolute bottom-20 right-8 w-20 h-20 bg-[#A8DADC] rounded-full opacity-70" />
+                      <div className="absolute top-8 right-0 w-20 h-20 sm:w-32 sm:h-32 bg-[#F4D35E] rounded-full translate-x-8 sm:translate-x-12 opacity-60" />
+                      <div className="absolute bottom-20 right-8 w-10 h-10 sm:w-20 sm:h-20 bg-[#A8DADC] rounded-full opacity-70" />
                       <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#F1FAEE] rounded-full -translate-x-8 translate-y-8 opacity-80" />
                     </>
-                  )}
+                  )}  
                   {index === 2 && (
                     <>
                       <div className="absolute top-0 left-8 w-28 h-28 bg-[#90E0A8] rounded-full -translate-y-10 opacity-60" />
                       <div className="absolute bottom-12 left-0 w-16 h-16 bg-[#FFD166] rounded-full -translate-x-8 opacity-70" />
-                      <div className="absolute top-1/3 right-0 w-20 h-20 bg-[#EF8354] rounded-full translate-x-10 opacity-60" />
+                      <div className="absolute top-1/3 right-0 w-20 h-20 bg-[#EF8354] rounded-full  translate-x-6 sm:translate-x-10 opacity-60" />
                       <div className="absolute bottom-0 right-12 w-24 h-24 bg-[#A8DADC] rounded-full translate-y-8 opacity-70" />
                     </>
                   )}

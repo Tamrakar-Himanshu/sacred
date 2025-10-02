@@ -55,32 +55,31 @@ const Faq = () => {
   };
 
   return (
-    <div className=" bg-[#F5F3F0] relative ">
+    <div className="bg-[#F5F3F0] relative">
       {/* Yellow decorative wave at top */}
-      
       <div className="absolute top-[-40px] left-0 right-0 h-20 overflow-hidden">
-        <div className="w-full h-full bg-[#F5F3F0]" style={{ borderRadius: ' 50% 50% 0 0' }} />
+        <div className="w-full h-full bg-[#F5F3F0]" style={{ borderRadius: '50% 50% 0 0' }} />
       </div>
 
-      <div className="relative container mx-auto px-4 py-20 max-w-4xl">
+      <div className="relative container mx-auto px-4 py-12 md:py-20 max-w-4xl">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-light text-center mb-16 text-slate-900 tracking-tight">
+        <h2 className="text-3xl md:text-5xl font-light text-center mb-8 md:mb-16 text-slate-900 tracking-tight px-4">
           Frequently asked questions
         </h2>
 
-        {/* FAQ Items */}
-        <div className="space-y-4 mb-12 px-40">
+        {/* FAQ Items - Responsive padding */}
+        <div className="space-y-4 mb-8 md:mb-12 px-0 md:px-20 lg:px-40">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-slate-300 pb-4">
+            <div key={index} className="border-b border-slate-300">
               <button
                 onClick={() => toggleFaq(index)}
-                className="w-full flex items-center justify-between text-left py-4 hover:text-slate-600 transition-colors"
+                className="w-full flex items-start md:items-center justify-between text-left py-4 hover:text-slate-600 transition-colors gap-4"
               >
-                <span className="text-lg font-normal text-slate-900 pr-8">
+                <span className="text-base md:text-lg font-normal text-slate-900 flex-1">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 text-slate-600 flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-5 h-5 text-slate-600 flex-shrink-0 transition-transform duration-300 mt-1 md:mt-0 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />
@@ -89,11 +88,11 @@ const Faq = () => {
               <div
                 className={`overflow-hidden transition-all duration-300 ${
                   openIndex === index
-                    ? "max-h-96 opacity-100"
+                    ? "max-h-96 opacity-100 mb-4"
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <p className="text-slate-700 pb-4 leading-relaxed">
+                <p className="text-slate-700 pb-4 leading-relaxed text-sm md:text-base">
                   {faq.answer}
                 </p>
               </div>
@@ -105,15 +104,15 @@ const Faq = () => {
         <div className="text-center mb-8">
           <a
             href="#"
-            className="text-[#D97F11] hover:text-[#BF5F0B] font-medium underline transition-colors"
+            className="text-[#D97F11] hover:text-[#BF5F0B] font-medium underline transition-colors text-[28px] md:text-base"
           >
             More frequently asked questions
           </a>
         </div>
 
         {/* Get Started Button */}
-        <div className="text-center">
-          <button className="bg-[#D97F11] hover:bg-[#BF5F0B] text-slate-900 font-medium px-12 py-4 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg hover:text-white">
+        <div className="text-center px-4">
+          <button className="bg-[#D97F11] hover:bg-[#BF5F0B] text-slate-900 font-medium px-8 md:px-12 py-3 md:py-4 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg hover:text-white w-full md:w-auto">
             Get started
           </button>
         </div>
