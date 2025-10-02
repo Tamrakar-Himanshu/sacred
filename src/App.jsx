@@ -3,6 +3,9 @@ import HeroSection from "./components/HeroSection";
 import LocomotiveScroll from "locomotive-scroll";
 import AboutUs from "./components/AboutUs";
 import PhotoSection from "./components/PhotoSection";
+import HowItWorks from "./components/HiwItWorks";
+import Faq from "./components/Faq";
+import Footer from "./components/Footer";
 
 export default function App() {
   const scrollContainerRef = useRef(null);
@@ -37,6 +40,9 @@ export default function App() {
       <HeroSection />
       <AboutUs />
       <PhotoSection />
+      <HowItWorks />
+      <Faq />
+      <Footer />
     </div>
   );
 }

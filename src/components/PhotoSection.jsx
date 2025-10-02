@@ -5,7 +5,7 @@ import div2 from "../assets/divider-main-2.png"
 const PhotoSection = () => {
   return (
     <>
-      <section className="relative bg-gradient-to-b from-[#f7f0e6] to-[#fffcf6]">
+      <section className="relative bg-gradient-to-b from-[#f7f0e6] to-[#fffcf6] z-0">
         <div className="curved-top"></div>
 
         {/* Main content */}
@@ -29,7 +29,7 @@ const PhotoSection = () => {
                 </p>
 
                 <div className="pt-4">
-                  <button className="px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-medium rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                  <button className="px-8 py-4 bg-[#D97F11] hover:bg-[#BF5F0B] text-white font-medium rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
                     Get matched to a therapist
                   </button>
                 </div>

@@ -7,6 +7,11 @@ import {
 } from "lucide-react";
 import logo from "../assets/IMG_9437.PNG";
 import divider from "../assets/divider-main-1.png";
+// Import your card images
+import individualImg from "../assets/individual.png";
+import couplesImg from "../assets/couple.png";
+import teenImg from "../assets/teen.png";
+import familyImg from "../assets/teen.png";
 
 const HeroSection = () => {
   const [activeCard, setActiveCard] = useState(0);
@@ -22,7 +27,8 @@ const HeroSection = () => {
         word: "happy",
         bgColor: "bg-emerald-700",
         bottomBg: "bg-yellow-300",
-        emoji: "🧘‍♀️",
+        image: individualImg,
+        fillColor: "fill-emerald-700",
       },
       {
         id: 1,
@@ -31,7 +37,8 @@ const HeroSection = () => {
         word: "loved",
         bgColor: "bg-teal-600",
         bottomBg: "bg-teal-500",
-        emoji: "👫",
+        image: couplesImg,
+        fillColor: "fill-teal-600",
       },
       {
         id: 2,
@@ -40,7 +47,8 @@ const HeroSection = () => {
         word: "supported",
         bgColor: "bg-amber-700",
         bottomBg: "bg-yellow-300",
-        emoji: "🧑",
+        image: teenImg,
+        fillColor: "fill-amber-700",
       },
       {
         id: 3,
@@ -49,7 +57,8 @@ const HeroSection = () => {
         word: "connected",
         bgColor: "bg-purple-700",
         bottomBg: "bg-purple-400",
-        emoji: "👨‍👩‍👧‍👦",
+        image: familyImg,
+        fillColor: "fill-purple-700",
       },
     ],
     []
@@ -163,7 +172,7 @@ const HeroSection = () => {
                     <div
                       className={`${card.bgColor} rounded-3xl overflow-hidden shadow-2xl`}
                     >
-                      <div className="p-8">
+                      <div className="p-8 pb-30">
                         <h2 className="text-white text-4xl font-light mb-4">
                           {card.title}
                         </h2>
@@ -175,10 +184,26 @@ const HeroSection = () => {
                       <div
                         className={`${card.bottomBg} h-64 relative overflow-hidden`}
                       >
-                        <div className="absolute bottom-0 right-0 w-full h-full flex items-end justify-center">
-                          <div className="text-9xl opacity-20">
-                            {card.emoji}
-                          </div>
+                        {/* Curvy separator */}
+                        <svg
+                          className="absolute top-0 left-0 w-full"
+                          style={{ transform: "translateY(-1px)" }}
+                          viewBox="0 0 1200 80"
+                          preserveAspectRatio="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0,40 C300,80 600,0 900,40 C1050,60 1150,40 1200,40 L1200,0 L0,0 Z"
+                            className={card.fillColor}
+                          />
+                        </svg>
+                        {/* Image container */}
+                        <div className="absolute inset-0 flex items-center justify-center p-8 ">
+                          <img
+                            src={card.image}
+                            alt={card.title}
+                            className="w-full  object-cover"
+                          />
                         </div>
                       </div>
                     </div>
