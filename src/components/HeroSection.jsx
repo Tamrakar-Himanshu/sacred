@@ -21,6 +21,8 @@ const HeroSection = () => {
   const [activeCard, setActiveCard] = useState(0);
   const [headerBgColor, setHeaderBgColor] = useState("bg-[#732C02]");
   const [headerTextColor, setHeaderTextColor] = useState("text-[#ffffff]");
+  const [BorderColor, setBorderColor] = useState("border-[#ffffff]");
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const cardsRef = useRef(null);
 
@@ -86,9 +88,11 @@ const HeroSection = () => {
         if (cardsTop <= 50) {
           setHeaderBgColor("bg-[#ffffff]");
           setHeaderTextColor("text-[#732C02]");
+          setBorderColor("border-[#732C02]");
         } else {
           setHeaderBgColor("bg-[#732C02]");
           setHeaderTextColor("text-[#ffffff]");
+          setBorderColor("border-[#fff]");
         }
       }
     };
@@ -106,33 +110,36 @@ const HeroSection = () => {
       <div
         className={`${headerBgColor} sticky top-0 z-50 transition-colors duration-500`}
       >
-        <nav className="flex items-center justify-between px-6 py-2 sm:py-3">
+        <nav className="flex items-center justify-between px-6 py-2 ">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="logo" className="w-12 h-12 sm:w-16 sm:h-16" />
+            <img src={logo} alt="logo" className="w-12 h-12 sm:w-10 sm:h-10" />
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8 font-semibold">
             <a href="#" className={`${headerTextColor} hover:opacity-80`}>
               Business
             </a>
-            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
+            <a
+              href="#aboutus"
+              className={`${headerTextColor} hover:opacity-80`}
+            >
               About
             </a>
             <a href="#" className={`${headerTextColor} hover:opacity-80`}>
               Advice
             </a>
-            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
+            <a href="#faq" className={`${headerTextColor} hover:opacity-80`}>
               FAQ
             </a>
             <a href="#" className={`${headerTextColor} hover:opacity-80`}>
-              Therapist jobs
+              Therapist Jobs
             </a>
             <a href="#" className={`${headerTextColor} hover:opacity-80`}>
               Contact
             </a>
             <button
-              className={`${headerTextColor} border border-white rounded-full px-6 py-2 hover:bg-[#732C02] hover:text-[#fff] transition-colors`}
+              className={`${headerTextColor} border ${BorderColor} rounded-full px-6 py-2 hover:bg-[#732C02] hover:text-[#fff] transition-colors`}
             >
               Login
             </button>
@@ -155,11 +162,11 @@ const HeroSection = () => {
 
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-[#732C02] text-white flex flex-col space-y-4 px-6 py-4">
+          <div className="lg:hidden font-bold bg-[#732C02] text-white flex flex-col space-y-4 px-6 py-4">
             <a href="#">Business</a>
-            <a href="#">About</a>
+            <a href="#aboutus">About</a>
             <a href="#">Advice</a>
-            <a href="#">FAQ</a>
+            <a href="#faq">FAQ</a>
             <a href="#">Therapist jobs</a>
             <a href="#">Contact</a>
             <button className="border border-white rounded-full px-6 py-2 hover:bg-white hover:text-[#732C02] transition-colors">
@@ -180,13 +187,13 @@ const HeroSection = () => {
         >
           {/* Left Side - Heading */}
           <div className="flex flex-col justify-center ">
-            <h1 className="text-white sm:text-left text-center  text-3xl lg:text-7xl font-light mb-8">
-              You deserve to be{" "}
+            <h1 className=" sm:text-left text-center  text-[28px] lg:text-8xl font-extrabold mb-2 sm:mb-8 text-orange-100">
+              You Deserve To Be{" "}
               <span className="inline-block min-w-[200px] transition-all duration-500">
-                {cards[activeCard].word}.
+                Happy
               </span>
             </h1>
-            <p className="text-white text-sm lg:text-2xl sm:text-left text-center ">
+            <p className="text-white text-[20px] font-normal sm:font-semibold lg:text-2xl sm:text-left text-center ">
               What type of therapy are you looking for?
             </p>
           </div>
@@ -204,8 +211,12 @@ const HeroSection = () => {
                   {/* Text on left */}
                   <div className="flex items-center justify-around gap-2">
                     <div>
-                      <h3 className="text-lg font-semibold text-white">{card.title}</h3>
-                      <p className="text-md font-semibold text-white">{card.subtitle}</p>
+                      <h3 className="text-lg font-semibold text-white">
+                        {card.title}
+                      </h3>
+                      <p className="text-md font-semibold text-white">
+                        {card.subtitle}
+                      </p>
                     </div>
                     <div className="">
                       <CircleArrowRight className="text-white w-5 " />
@@ -278,7 +289,7 @@ const HeroSection = () => {
               </div>
 
               {/* Carousel Controls */}
-              <button
+              {/* <button
                 onClick={prevCard}
                 className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors z-10"
                 aria-label="Previous card"
@@ -291,7 +302,7 @@ const HeroSection = () => {
                 aria-label="Next card"
               >
                 <ChevronRight className="w-6 h-6 text-teal-800" />
-              </button>
+              </button> */}
 
               {/* Carousel Indicators */}
               <div className="flex justify-center gap-2 mt-6">
@@ -321,7 +332,7 @@ const HeroSection = () => {
 
           <img
             src={divider}
-            alt="desktop divider"
+            alt="desktop divider "
             className="w-full hidden md:block"
           />
         </div>

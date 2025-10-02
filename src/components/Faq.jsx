@@ -55,10 +55,13 @@ const Faq = () => {
   };
 
   return (
-    <div className="bg-[#F5F3F0] relative">
+    <div className="bg-[#F5F3F0] relative" id="faq">
       {/* Yellow decorative wave at top */}
       <div className="absolute top-[-40px] left-0 right-0 h-20 overflow-hidden">
-        <div className="w-full h-full bg-[#F5F3F0]" style={{ borderRadius: '50% 50% 0 0' }} />
+        <div
+          className="w-full h-full bg-[#F5F3F0]"
+          style={{ borderRadius: "50% 50% 0 0" }}
+        />
       </div>
 
       <div className="relative container mx-auto px-6 py-12 md:py-20 max-w-4xl">
@@ -111,7 +114,7 @@ const Faq = () => {
         </div>
 
         {/* Get Started Button */}
-        <div className="text-center px-4">
+        <div className="text-center px-16 sm:px-4">
           <button className="bg-[#D97F11] hover:bg-[#BF5F0B] text-slate-900 font-medium px-8 md:px-12 py-3 md:py-4 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg hover:text-white w-full md:w-auto">
             Get started
           </button>
