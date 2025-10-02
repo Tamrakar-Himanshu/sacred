@@ -1,0 +1,24 @@
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.border-img {
+    border-radius: 15px 70px 15px 15px;
+}
+
+.curved-top {
+    content: "";
+    height: 84px;
+    background: #f7f0e6;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -70px;
+}
+
+body,
+main {
+    background-color: #fffcf6;
+}
