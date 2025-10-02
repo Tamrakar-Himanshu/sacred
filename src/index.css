@@ -17,6 +17,16 @@
     right: 0;
     top: -70px;
 }
+.curved-top-1 {
+    content: "";
+    height: 84px;
+    background: #D97F11;
+    border-radius: 50% 50% 0 0 / 70% 130% 0% 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -75px;
+}
 
 
 .container {

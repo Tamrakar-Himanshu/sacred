@@ -117,9 +117,6 @@ const HeroSection = () => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-8 font-semibold">
-            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
-              Business
-            </a>
             <a
               href="#aboutus"
               className={`${headerTextColor} hover:opacity-80`}
@@ -127,16 +124,17 @@ const HeroSection = () => {
               About
             </a>
             <a href="#" className={`${headerTextColor} hover:opacity-80`}>
-              Advice
+              Our Work
             </a>
+            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
+              How It Works
+            </a>
+
             <a href="#faq" className={`${headerTextColor} hover:opacity-80`}>
               FAQ
             </a>
-            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
-              Therapist Jobs
-            </a>
-            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
-              Contact
+            <a href="#footer" className={`${headerTextColor} hover:opacity-80`}>
+              Contact Us
             </a>
             <button
               className={`${headerTextColor} border ${BorderColor} rounded-full px-6 py-2 hover:bg-[#732C02] hover:text-[#fff] transition-colors`}
@@ -163,12 +161,11 @@ const HeroSection = () => {
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
           <div className="lg:hidden font-bold bg-[#732C02] text-white flex flex-col space-y-4 px-6 py-4">
-            <a href="#">Business</a>
-            <a href="#aboutus">About</a>
-            <a href="#">Advice</a>
+            <a href="#">About</a>
+            <a href="#aboutus">Our Work</a>
+            <a href="#">How It Works</a>
             <a href="#faq">FAQ</a>
-            <a href="#">Therapist jobs</a>
-            <a href="#">Contact</a>
+            <a href="#footer">Contact Us</a>
             <button className="border border-white rounded-full px-6 py-2 hover:bg-white hover:text-[#732C02] transition-colors">
               Login
             </button>
@@ -187,7 +184,7 @@ const HeroSection = () => {
         >
           {/* Left Side - Heading */}
           <div className="flex flex-col justify-center ">
-            <h1 className=" sm:text-left text-center  text-[28px] lg:text-8xl font-extrabold mb-2 sm:mb-8 text-orange-100">
+            <h1 className=" sm:text-left text-center  text-[28px] lg:text-8xl font-extrabold mb-2 sm:mb-8 text-white">
               You Deserve To Be{" "}
               <span className="inline-block min-w-[200px] transition-all duration-500">
                 Happy

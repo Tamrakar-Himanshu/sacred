@@ -9,8 +9,8 @@ const VideoSection = () => {
 
   return (
     <>
-      <section className="relative bg-gradient-to-b from-[#f7f0e6] to-[#fffcf6] z-0">
-        <div className="curved-top"></div>
+      <section className="relative bg-[#D97F11] z-0">
+        <div className="curved-top-1 "></div>
 
         {/* Main content */}
         <div className="pt-2 sm:pt-32 pb-20 lg:pt-40 lg:pb-28">
@@ -18,7 +18,7 @@ const VideoSection = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Left Side: Text Content */}
               <div className="space-y-6">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 leading-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight">
                   Professional and qualified therapists who you can trust
                 </h2>
 
@@ -33,7 +33,7 @@ const VideoSection = () => {
                 </p>
 
                 <div className="pt-4">
-                  <button className="px-8 py-4 bg-[#D97F11] hover:bg-[#BF5F0B] text-white font-medium rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                  <button className="px-8 py-4 bg-[#fac94ee6] hover:bg-[#BF5F0B] text-white font-medium rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
                     Get matched to a therapist
                   </button>
                 </div>
@@ -108,7 +108,7 @@ const VideoSection = () => {
           </div>
         </div>
         <div className="">
-          <img src={div2} alt="img" className="w-full" />
+          <img src={div2} alt="img" className="w-full " />
         </div>
       </section>
     </>

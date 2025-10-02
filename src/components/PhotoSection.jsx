@@ -14,7 +14,7 @@ const PhotoSection = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Left Side: Text Content */}
               <div className="space-y-6">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 leading-tight">
+                <h2 className="text-4xl font-normal md:text-5xl lg:text-6xl  text-gray-900 leading-tight">
                   Professional and qualified therapists who you can trust
                 </h2>
 
@@ -62,7 +62,7 @@ const PhotoSection = () => {
           </div>
         </div>
         <div className="">
-          <img src={div2} alt="img" className="w-full  " />
+          <img src={div2} alt="img" className="w-full    " />
         </div>
       </section>
     </>

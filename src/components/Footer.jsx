@@ -3,7 +3,7 @@ import { Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-stone-100 border-t border-stone-200">
+    <footer id='footer' className="bg-stone-100 border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-6 pb-10">
         {/* Main Navigation Links */}
         <div className="py-6 border-b border-stone-200">
