@@ -44,7 +44,7 @@ const Footer = () => {
             {/* Social Media Icons */}
             <div className="flex items-center gap-3">
               <a 
-                href="https://www.facebook.com/BetterHelp" 
+                href="#" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#BF5F0B] hover:bg-[#D97F11] flex items-center justify-center transition-all duration-200"
@@ -53,7 +53,7 @@ const Footer = () => {
                 <Facebook className="w-5 h-5 text-white" fill="white" />
               </a>
               <a 
-                href="https://www.instagram.com/betterhelp" 
+                href="#" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#BF5F0B] hover:bg-[#D97F11] flex items-center justify-center transition-all duration-200"
@@ -62,7 +62,7 @@ const Footer = () => {
                 <Instagram className="w-5 h-5 text-white" />
               </a>
               <a 
-                href="https://www.tiktok.com/@betterhelp" 
+                href="#" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#BF5F0B] hover:bg-[#D97F11] flex items-center justify-center transition-all duration-200"
@@ -73,7 +73,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://twitter.com/betterhelp" 
+                href="#" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#BF5F0B] hover:bg-[#D97F11] flex items-center justify-center transition-all duration-200"
@@ -84,7 +84,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://www.linkedin.com/company/betterhelp" 
+                href="#" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#BF5F0B] hover:bg-[#D97F11] flex items-center justify-center transition-all duration-200"

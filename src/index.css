@@ -18,9 +18,7 @@
     top: -70px;
 }
 
-body,
-main {
-    background-color: #fffcf6;
-    max-width: 1440px;
+.container {
+    max-width: 1800px;
     margin: 0 auto;
 }

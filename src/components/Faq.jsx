@@ -55,7 +55,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F3F0] relative">
+    <div className=" bg-[#F5F3F0] relative ">
       {/* Yellow decorative wave at top */}
       
       <div className="absolute top-[-40px] left-0 right-0 h-20 overflow-hidden">
@@ -69,7 +69,7 @@ const Faq = () => {
         </h2>
 
         {/* FAQ Items */}
-        <div className="space-y-4 mb-12">
+        <div className="space-y-4 mb-12 px-40">
           {faqs.map((faq, index) => (
             <div key={index} className="border-b border-slate-300 pb-4">
               <button

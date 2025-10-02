@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import upperimg from "../assets/line-burst-green.svg";
 import { ChevronDown } from "lucide-react";
 
 const AboutUs = () => {
+  const sectionRef = useRef(null);
+
+  const handleScrollToTop = () => {
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   const skills = [
     "5+ Years Experience",
     "200+ Projects Completed",
@@ -15,15 +23,18 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="bg-[#FFFCF6] px-32 ">
-      <div className="flex justify-center">
-        <ChevronDown className="w-8 h-8 text-black  " />
-      </div>{" "}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center  py-40">
-        {/* Left: keep same-style headline */}
+    <section ref={sectionRef} className="bg-[#FFFCF6] px-32">
+      <div className="relative flex justify-center">
+        <ChevronDown
+          onClick={handleScrollToTop}
+          className="absolute w-8 h-8 text-black cursor-pointer top-[-44px]"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-40">
+        {/* Left: Headline */}
         <div className="relative">
-          {/* SVG decoration - positioned absolutely */}
-          <div className="absolute -left-14  -top-8">
+          <div className="absolute -left-14 -top-8">
             <img src={upperimg} alt="img" />
           </div>
 
@@ -36,7 +47,7 @@ const AboutUs = () => {
           </h2>
         </div>
 
-        {/* Right: Skills/Expertise tags */}
+        {/* Right: Skills */}
         <div>
           <div className="flex flex-wrap gap-3 lg:gap-4">
             {skills.map((skill, index) => (

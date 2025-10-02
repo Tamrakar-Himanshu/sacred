@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import { Play } from "lucide-react";
-import girl from "../assets/divider-main-4.png"
-
+import girl from "../assets/divider-main-4.png";
 
 const HowItWorks = () => {
   const [hoveredVideo, setHoveredVideo] = useState(null);
@@ -42,7 +41,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F5F7F5] pt-20 ">
+    <div className=" bg-[#F5F7F5] pt-20 ">
       <div className="container mx-auto max-w-7xl">
         {/* Title */}
         <h2 className="text-5xl md:text-6xl font-light text-center mb-20 text-slate-900 tracking-tight">
@@ -50,11 +49,11 @@ const HowItWorks = () => {
         </h2>
 
         {/* Sections */}
-        <div className="space-y-32">
+        <div className="space-y-32 px-20   ">
           {sections.map((section, index) => (
             <div key={section.id}>
               <div
-                className={`grid md:grid-cols-2 gap-16 items-center ${
+                className={`grid md:grid-cols-2 gap-16 items-center${
                   index % 2 === 1 ? "md:flex-row-reverse" : ""
                 }`}
               >
@@ -152,32 +151,31 @@ const HowItWorks = () => {
                       {section.description}
                     </p>
                   </div>
-
-                  {/* Arrow Indicator - only show on first two sections */}
-                  {index < 2 && (
-                    <div className="flex justify-center pt-8 ">
-                      <svg
-                        className="w-12 h-16 text-[#6B8E6F]"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        viewBox="0 0 24 36"
-                      >
-                        <path
-                          d="M12 4 L12 28 M12 28 L6 22 M12 28 L18 22"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                  )}
                 </div>
               </div>
+              {/* Arrow Indicator - only show on first two sections */}
+              {index < 2 && (
+                <div className="flex justify-around pt-8 ">
+                  <svg
+                    className="w-12 h-16 text-[#D97F11]"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    viewBox="0 0 24 36"
+                  >
+                    <path
+                      d="M12 4 L12 28 M12 28 L6 22 M12 28 L18 22"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
-      <img src={girl} alt="img" />
+      <img src={girl} alt="img" className=" container " />
     </div>
   );
 };

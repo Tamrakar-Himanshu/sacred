@@ -62,7 +62,7 @@ const PhotoSection = () => {
           </div>
         </div>
         <div className="">
-          <img src={div2} />
+          <img src={div2} alt="img" className="w-full h-20" />
         </div>
       </section>
     </>

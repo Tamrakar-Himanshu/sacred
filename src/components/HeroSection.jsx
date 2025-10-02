@@ -16,6 +16,7 @@ import familyImg from "../assets/teen.png";
 const HeroSection = () => {
   const [activeCard, setActiveCard] = useState(0);
   const [headerBgColor, setHeaderBgColor] = useState("bg-[#732C02]");
+  const [headerTextColor, setHeaderTextColor] = useState("text-[#ffffff]");
   const cardsRef = useRef(null);
 
   const cards = useMemo(
@@ -80,9 +81,11 @@ const HeroSection = () => {
 
         // When cards section reaches top (within 100px threshold)
         if (cardsTop <= 50) {
-          setHeaderBgColor("bg-[#D97F11]");
+          setHeaderBgColor("bg-[#ffffff]");
+          setHeaderTextColor("text-[#732C02]");
         } else {
           setHeaderBgColor("bg-[#732C02]");
+          setHeaderTextColor("text-[#ffffff]");
         }
       }
     };
@@ -112,28 +115,32 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="flex items-center gap-8">
-            <a href="#" className="text-white hover:opacity-80">
+            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
               Business
             </a>
-            <a href="#" className="text-white hover:opacity-80">
+            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
               About
             </a>
-            <a href="#" className="text-white hover:opacity-80">
+            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
               Advice
             </a>
-            <a href="#" className="text-white hover:opacity-80">
+            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
               FAQ
             </a>
-            <a href="#" className="text-white hover:opacity-80">
+            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
               Therapist jobs
             </a>
-            <a href="#" className="text-white hover:opacity-80">
+            <a href="#" className={`${headerTextColor} hover:opacity-80`}>
               Contact
             </a>
-            <button className="text-white border border-white rounded-full px-6 py-2 hover:bg-white hover:text-[#732C02] transition-colors">
+            <button
+              className={`${headerTextColor} border border-white rounded-full px-6 py-2 hover:bg-[#732C02] hover:text-[#fff] transition-colors`}
+            >
               Login
             </button>
-            <button className="bg-white text-[#732C02] rounded-full px-6 py-2 font-semibold hover:bg-gray-100 transition-colors">
+            <button
+              className={`bg-white text-[#732C02] rounded-full px-6 py-2 font-semibold hover:bg-gray-100 transition-colors`}
+            >
               Get started
             </button>
           </div>
@@ -144,7 +151,7 @@ const HeroSection = () => {
         {/* Hero Content - Two Column Layout */}
         <div
           ref={cardsRef}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-8 lg:px-16 pt-20 pb-32 items-center max-w-7xl mx-auto"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-8 lg:px-16 pt-10 pb-32 items-center max-w-7xl mx-auto container max-h-[80vh]"
         >
           {/* Left Side - Heading */}
           <div className="flex flex-col justify-center">
@@ -245,8 +252,8 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="">
-          <img src={divider} alt="btm" />
+        <div className=" ">
+          <img src={divider} alt="btm" className="w-full" />
         </div>
         {/* Scroll Indicator */}
       </div>
